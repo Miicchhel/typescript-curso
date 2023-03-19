@@ -1,17 +1,22 @@
+import { Negociacao } from "../models/negociacao.js";
+
 export class NegociacaoController {
-  private inputData;
-  private inputQuantidade;
-  private inputValor;
+  private _inputData: HTMLInputElement;
+  private _inputQuantidade: HTMLInputElement;
+  private _inputValor: HTMLInputElement;
 
   constructor() {
-    this.inputData = document.querySelector('#data');
-    this.inputQuantidade = document.querySelector('#quantidade');
-    this.inputValor = document.querySelector('#valor');
+    this._inputData = document.querySelector('#data');
+    this._inputQuantidade = document.querySelector('#quantidade');
+    this._inputValor = document.querySelector('#valor');
   }
 
   adiciona() {
-    console.log(this.inputData);
-    console.log(this.inputQuantidade);
-    console.log(this.inputValor);
+    const negociacao = new Negociacao(
+      this._inputData.value,
+      this._inputQuantidade.value,
+      this._inputValor.value
+    );
+    console.log(negociacao);
   }
 }
