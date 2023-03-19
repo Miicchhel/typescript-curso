@@ -1,6 +1,6 @@
 import { Negociacao } from "./negociacao.js";
 
-export class Negociacaoes {
+export class Negociacoes {
   private _negociacoes: Negociacao[] = [];
 
   adiciona(negociacao: Negociacao): void {
