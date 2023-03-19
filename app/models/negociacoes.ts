@@ -1,3 +1,7 @@
+import { Negociacao } from "./negociacao.js";
+
 export class Negociacaoes {
-  private negociacoes = [];
+  private negociacoes: Array<Negociacao> = [];
 }
+
+const list = new Negociacaoes()
