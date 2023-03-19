@@ -16,7 +16,7 @@ export class NegociacaoController {
   adiciona(): void {
     const negociacao = this.criaNegociacao();
     this._negociacoes.adiciona(negociacao);
-    this._negociacoes.lista().pop(); //! temos que tirar esse erro. A ideia é só ser possível add.
+    this._negociacoes.lista().pop(); //* com o Spread operator o problema já é resolvido.
     this.lipaFormulario();
     console.log(this._negociacoes.lista());
   }
