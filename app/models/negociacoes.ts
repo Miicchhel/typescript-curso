@@ -1,7 +1,17 @@
 import { Negociacao } from "./negociacao.js";
 
 export class Negociacaoes {
-  private negociacoes: Array<Negociacao> = [];
+  private _negociacoes: Array<Negociacao> = [];
+
+  adiciona(negociacao: Negociacao): void {
+    this._negociacoes.push(negociacao);
+  }
+
+  lista(): Array<Negociacao> {
+    return this._negociacoes;
+  }
 }
 
-const list = new Negociacaoes()
+const negociacoes = new Negociacaoes()
+negociacoes.adiciona(new Negociacao(new Date(),3,3))
+negociacoes.lista().forEach(element => {});
