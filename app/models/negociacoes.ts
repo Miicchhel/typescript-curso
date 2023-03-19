@@ -11,7 +11,3 @@ export class Negociacaoes {
     return this._negociacoes;
   }
 }
-
-const negociacoes = new Negociacaoes()
-negociacoes.adiciona(new Negociacao(new Date(),3,3))
-negociacoes.lista().forEach(element => {});

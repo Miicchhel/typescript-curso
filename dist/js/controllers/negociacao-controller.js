@@ -1,14 +1,18 @@
 import { Negociacao } from "../models/negociacao.js";
+import { Negociacaoes } from "../models/negociacoes.js";
 export class NegociacaoController {
     constructor() {
+        this._negociacoes = new Negociacaoes();
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade');
         this._inputValor = document.querySelector('#valor');
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
+        this._negociacoes.adiciona(negociacao);
+        this._negociacoes.lista().pop(); //! temos que tirar esse erro. A ideia é só ser possível add.
         this.lipaFormulario();
-        console.log(negociacao);
+        console.log(this._negociacoes.lista());
     }
     criaNegociacao() {
         const exp = /-/g;
