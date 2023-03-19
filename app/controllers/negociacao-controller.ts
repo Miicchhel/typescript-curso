@@ -13,6 +13,7 @@ export class NegociacaoController {
 
   adiciona(): void {
     const negociacao = this.criaNegociacao()
+    this.lipaFormulario();
     console.log(negociacao);
   }
 
@@ -22,5 +23,12 @@ export class NegociacaoController {
     const quantidade = parseInt(this._inputQuantidade.value);
     const valor = parseFloat(this._inputValor.value);
     return new Negociacao(date, quantidade, valor);
+  }
+
+  lipaFormulario(): void {
+    this._inputData.value = '';
+    this._inputQuantidade.value = '';
+    this._inputValor.value = '';
+    this._inputData.focus();
   }
 }
