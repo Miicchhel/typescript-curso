@@ -9,9 +9,6 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        //*! observe esse problema.
-        // negociacao.data = new Date(); não deixa fazer uma nova atribuição OK
-        negociacao.data.setDate(2); //* isso é possível por ser um objeto. 
         this._negociacoes.adiciona(negociacao);
         this.lipaFormulario();
         console.log(this._negociacoes.lista());

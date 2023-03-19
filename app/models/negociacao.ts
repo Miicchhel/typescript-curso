@@ -7,7 +7,7 @@ export class Negociacao {
   ) {}
 
   get data(): Date {
-    const data = new Date(this._data.getTime()); // data idêntica, mas em outra referência.
+    const data = new Date(this._data.getTime());
     return data;
   }
 
