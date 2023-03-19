@@ -1,4 +1,11 @@
 export class NegociacoesView {
+
+  private _elemento: HTMLElement;
+
+  constructor(seletor:string){
+    this._elemento = document.querySelector(seletor)
+  }
+
   template(): string {
     return `
     <table class="table table-hover table-bordered">
@@ -13,5 +20,9 @@ export class NegociacoesView {
       </tbody>
     </table>
     `
+  }
+
+  update(): void {
+    this._elemento.innerHTML = this.template();
   }
 }
