@@ -10,7 +10,6 @@ export class NegociacaoController {
     adiciona() {
         const negociacao = this.criaNegociacao();
         this._negociacoes.adiciona(negociacao);
-        //* this._negociacoes.lista().pop(); tipando com ReadonlyArray esse problema é resolvido.
         this.lipaFormulario();
         console.log(this._negociacoes.lista());
     }
