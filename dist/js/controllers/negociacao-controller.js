@@ -14,9 +14,15 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        this._negociacoes.adiciona(negociacao);
-        this.atualizaView();
-        this.lipaFormulario();
+        //só acrescentar nos dias úteis
+        if (negociacao.data.getDay() > 0 && negociacao.data.getDay() < 6) {
+            this._negociacoes.adiciona(negociacao);
+            this.atualizaView();
+            this.lipaFormulario();
+        }
+        else {
+            this._mensagemView.update('Apenas negociações em dias úteis são aceitas.');
+        }
     }
     criaNegociacao() {
         const exp = /-/g;
