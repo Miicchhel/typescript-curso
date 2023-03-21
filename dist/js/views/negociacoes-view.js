@@ -21,6 +21,7 @@ export class NegociacoesView extends View {
           `;
         }).join('')}
       </tbody>
+      <!-- <p>oi</p><script>alert('oi')</script> protegente template com sucesso -->
     </table>
     `;
     }
