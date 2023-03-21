@@ -20,7 +20,12 @@ export class NegociacaoController {
   }
 
   public adiciona(): void {
-    const negociacao = this.criaNegociacao();
+    const negociacaoTemp = new Negociacao(null, 0, 0)
+    const negociacao = negociacaoTemp.criaDe(
+      this._inputData.value,
+      this._inputQuantidade.value,
+      this._inputValor.value,
+    )
     //só acrescentar nos dias úteis
     if (!this.ehDiaUtil(negociacao.data)) {
       this._mensagemView.update('Apenas negociações em dias úteis são aceitas.')
@@ -33,14 +38,6 @@ export class NegociacaoController {
 
   private ehDiaUtil(data: Date) {
     return data.getDay() > DiasDaSemana.DOMINGO && data.getDay() < DiasDaSemana.SABADO
-  }
-
-  private criaNegociacao(): Negociacao {
-    const exp = /-/g;
-    const date = new Date(this._inputData.value.replace(exp, ','));
-    const quantidade = parseInt(this._inputQuantidade.value);
-    const valor = parseFloat(this._inputValor.value);
-    return new Negociacao(date, quantidade, valor);
   }
 
   private lipaFormulario(): void {
