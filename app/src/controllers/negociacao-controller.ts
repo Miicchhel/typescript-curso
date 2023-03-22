@@ -26,7 +26,7 @@ export class NegociacaoController {
       this._inputData.value,
       this._inputQuantidade.value,
       this._inputValor.value,
-    )
+    );
     //só acrescentar nos dias úteis
     if (!this.ehDiaUtil(negociacao.data)) {
       this._mensagemView.update('Apenas negociações em dias úteis são aceitas.')
