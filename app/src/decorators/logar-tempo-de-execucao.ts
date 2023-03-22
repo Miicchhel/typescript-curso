@@ -12,7 +12,7 @@ export function logarTempoDeExecucao(emSegundos: boolean = false) {
       const retorno = metodoOriginal.apply(this, args);
       const t2 = performance.now();
       console.log(`o metodo ${propertyKey} levou ${(t2-t1)/divisor} ${unidade} para ser executado.`);
-      retorno;
+      return retorno;
     }
     return descriptor;
   }
