@@ -33,7 +33,6 @@ export class NegociacaoController {
             .then((res) => res.json())
             .then((dados) => {
             return dados.map((dadosDeHoje) => {
-                console.log('dadosDeHoje: ', dadosDeHoje);
                 return new Negociacao(new Date(), dadosDeHoje.vezes, dadosDeHoje.montante);
             });
         })
