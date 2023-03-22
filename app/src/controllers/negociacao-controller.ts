@@ -45,8 +45,19 @@ export class NegociacaoController {
     this.lipaFormulario();
   }
 
-  importaDados(): void {
-    alert('')
+  public importaDados(): void {
+    fetch('http://localhost:8080/dados')
+      .then((res) => res.json())
+      .then((dados: any[]) => {
+        return dados.map((dadosDeHoje) => {
+          console.log('dadosDeHoje: ', dadosDeHoje);
+          return new Negociacao(new Date(), dadosDeHoje.vezes, dadosDeHoje.montante);
+        });
+      })
+      .then((negociacoesDeHoje) => {
+        negociacoesDeHoje.forEach((item) => this._negociacoes.adiciona(item));
+        this._negociacoesView.update(this._negociacoes);
+      })
   }
 
   private ehDiaUtil(data: Date) {
