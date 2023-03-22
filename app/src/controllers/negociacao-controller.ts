@@ -45,6 +45,10 @@ export class NegociacaoController {
     this.lipaFormulario();
   }
 
+  importaDados(): void {
+    alert('')
+  }
+
   private ehDiaUtil(data: Date) {
     return data.getDay() > DiasDaSemana.DOMINGO && data.getDay() < DiasDaSemana.SABADO
   }
