@@ -18,7 +18,7 @@ export abstract class View<T> {
 
   protected abstract template(model: T): string;
 
-  @inspect()
+  @inspect // agora não preciso mais chamar a função.
   @logarTempoDeExecucao(true)
   public update(model: T):void {
     let template = this.template(model);
