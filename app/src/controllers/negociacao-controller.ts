@@ -17,10 +17,10 @@ export class NegociacaoController {
     this._inputData = document.querySelector('#data') as HTMLInputElement;
     this._inputQuantidade = document.querySelector('#quantidade') as HTMLInputElement;
     this._inputValor = document.querySelector('#valor') as HTMLInputElement;
-    this._negociacoesView.update(this._negociacoes);
+    // this._negociacoesView.update(this._negociacoes);
   }
 
-  @logarTempoDeExecucao()
+  @logarTempoDeExecucao(true)
   public adiciona(): void {
     const negociacao = Negociacao.criaDe(
       this._inputData.value,

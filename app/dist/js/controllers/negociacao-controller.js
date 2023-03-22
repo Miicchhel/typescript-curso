@@ -18,7 +18,6 @@ export class NegociacaoController {
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade');
         this._inputValor = document.querySelector('#valor');
-        this._negociacoesView.update(this._negociacoes);
     }
     adiciona() {
         const negociacao = Negociacao.criaDe(this._inputData.value, this._inputQuantidade.value, this._inputValor.value);
@@ -45,5 +44,5 @@ export class NegociacaoController {
     }
 }
 __decorate([
-    logarTempoDeExecucao()
+    logarTempoDeExecucao(true)
 ], NegociacaoController.prototype, "adiciona", null);
