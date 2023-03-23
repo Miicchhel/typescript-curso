@@ -27,8 +27,10 @@ export class NegociacaoController {
             return;
         }
         this._negociacoes.adiciona(negociacao);
-        this.atualizaView();
+        console.log(negociacao.paraTexto());
+        console.log(this._negociacoes.paraTexto());
         this.lipaFormulario();
+        this.atualizaView();
     }
     importaDados() {
         this._negociacoesService

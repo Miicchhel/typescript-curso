@@ -38,8 +38,12 @@ export class NegociacaoController {
       return;
     }
     this._negociacoes.adiciona(negociacao);
-    this.atualizaView();
+    
+    console.log(negociacao.paraTexto());
+    console.log(this._negociacoes.paraTexto());
+    
     this.lipaFormulario();
+    this.atualizaView();
   }
 
   public importaDados(): void {
@@ -51,7 +55,7 @@ export class NegociacaoController {
       });
   }
 
-  private ehDiaUtil(data: Date) {
+  private ehDiaUtil(data: Date): boolean {
     return data.getDay() > DiasDaSemana.DOMINGO && data.getDay() < DiasDaSemana.SABADO
   }
 
