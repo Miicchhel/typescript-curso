@@ -11,4 +11,7 @@ export class Negociacoes {
     paraTexto() {
         return JSON.stringify(this._negociacoes, null, 2);
     }
+    ehIgual(negociacoes) {
+        return JSON.stringify(this._negociacoes) === JSON.stringify(negociacoes);
+    }
 }
