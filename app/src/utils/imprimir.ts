@@ -1,7 +1,6 @@
-import { Negociacao } from "../models/negociacao.js";
-import { Negociacoes } from "../models/negociacoes.js";
+import { Imprimivel } from "./imprimivel.js";
 
-export function imprimir(...params: any[]) {
+export function imprimir(...params: Imprimivel[]) {
   params.forEach((item) => {
     console.log(item.paraTexto());
   });
