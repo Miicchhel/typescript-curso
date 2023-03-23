@@ -28,7 +28,7 @@ export class NegociacoesView extends View {
           `;
         }).join('')}
       </tbody>
-      <p>oi</p><script>alert('oi')</script> <!-- protegente template com sucesso -->
+      <script>alert('oi')</script> <!-- protegente template com sucesso -->
     </table>
     `;
     }
@@ -39,3 +39,4 @@ export class NegociacoesView extends View {
 __decorate([
     escape
 ], NegociacoesView.prototype, "template", null);
+//# sourceMappingURL=negociacoes-view.js.map

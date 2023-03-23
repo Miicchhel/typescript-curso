@@ -31,3 +31,4 @@ export class Negociacao {
             && this.data.getFullYear() === negociacao._data.getFullYear();
     }
 }
+//# sourceMappingURL=negociacao.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"imprimir.js","sourceRoot":"","sources":["../../../src/utils/imprimir.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,QAAQ,CAAC,GAAG,MAAoB;IAC9C,MAAM,CAAC,OAAO,CAAC,CAAC,IAAI,EAAE,EAAE;QACtB,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,SAAS,EAAE,CAAC,CAAC;IAChC,CAAC,CAAC,CAAC;AACL,CAAC"}
